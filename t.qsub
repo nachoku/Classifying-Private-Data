@@ -1,0 +1,7 @@
+#PBS -N example
+#PBS -l select=1:ncpus=16:mem=40gb:ngpus=2:gpu_model=p100,walltime=40:00:00
+
+module add anaconda/5.1.0
+source activate torch_env
+cd /home/nchocka/security/finalProject/Test_Image_Classifier
+python base.py
